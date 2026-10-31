@@ -1,0 +1,64 @@
++-------------------+
+|    ParkingLot     |
++-------------------+
+   | has      | has       | has
+   v          v           v
++----------+  +------------+  +----------+
+| Building |  | Entrance   |  |   Exit   |
++----------+  |   Gate     |  |   Gate   |
+   |          +------------+  +----------+
+   | has levels     |              | has
+   v                | uses         v
++-------------+     |        +------------------+
+| ParkingLevel|<----+        | CostComputation  |
++-------------+              +------------------+
+   | has managers                    | uses
+   | (by VehicleType)                v
+   v                         +----------------+
++-------------------+         | PricingStrategy|
+| ParkingSpotManager|         +----------------+
++-------------------+                  ^
+   | has spots                         | implements
+   | uses lookup                       |
+   v                            +-------------------+
++-------------+                 |FixedPricingStrategy|
+| ParkingSpot |                 +-------------------+
++-------------+
+
+ParkingSpotManager subclasses:
++-----------------------+      +-------------------------+
+|TwoWheelerSpotManager  |      |FourWheelerSpotManager   |
++-----------------------+      +-------------------------+
+             \                       /
+              \      is-a           /
+               +-------------------+
+               | ParkingSpotManager|
+               +-------------------+
+
+Lookup strategy:
++---------------------+       +--------------------+
+|RandomLookupStrategy | --implements--> |ParkingSpotLookupStrategy|
++---------------------+       +--------------------+
+
+Payment strategies:
++--------------+  --implements-->  +---------+  <--implements--  +-------------+
+| CashPayment  |                   | Payment |                   | UPIPayment  |
++--------------+                   +---------+                   +-------------+
+
+Ticket records:
++--------+  has  +---------+
+| Ticket | ----> | Vehicle |
++--------+       +---------+
+    |                 | has type
+    | has             v
+    |             +------------+
+    |             |VehicleType|
+    |             +------------+
+    |
+    +---- has ----> +-------------+
+    |               | ParkingLevel|
+    |               +-------------+
+    |
+    +---- has ----> +------------+
+                    | ParkingSpot|
+                    +------------+
