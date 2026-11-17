@@ -1,8 +1,8 @@
-package org.example.patterns.AdapterDesignPattern.Client;
+package org.example.patterns.structural.AdapterDesignPattern.Client;
 
-import org.example.patterns.AdapterDesignPattern.Adaptee.ImperialWeighingMachineImpl;
-import org.example.patterns.AdapterDesignPattern.Adapter.WeighingMachineAdapter;
-import org.example.patterns.AdapterDesignPattern.Adapter.WeightMachineAdapterImpl;
+import org.example.patterns.structural.AdapterDesignPattern.Adaptee.ImperialWeighingMachineImpl;
+import org.example.patterns.structural.AdapterDesignPattern.Adapter.WeighingMachineAdapter;
+import org.example.patterns.structural.AdapterDesignPattern.Adapter.WeightMachineAdapterImpl;
 
 // Client - Metric Weighing Machine
  public class MetricWeighingMachine {

@@ -1,4 +1,4 @@
-package org.example.patterns.AdapterDesignPattern.Adaptee;
+package org.example.patterns.structural.AdapterDesignPattern.Adaptee;
 
 // Adaptee - Existing Incompatible class
      public class ImperialWeighingMachineImpl implements ImperialWeighingMachine {

@@ -7,9 +7,13 @@ creational
 
 Structural
 
+1. decorator pattern
 
 
 
 
 
 Behavioral
+
+1. strategy pattern
+2. observer pattern

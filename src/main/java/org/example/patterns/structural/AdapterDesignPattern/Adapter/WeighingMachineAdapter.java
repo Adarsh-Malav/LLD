@@ -1,4 +1,4 @@
-package org.example.patterns.AdapterDesignPattern.Adapter;
+package org.example.patterns.structural.AdapterDesignPattern.Adapter;
 
 // Target or Adapter Interface
       public interface WeighingMachineAdapter {

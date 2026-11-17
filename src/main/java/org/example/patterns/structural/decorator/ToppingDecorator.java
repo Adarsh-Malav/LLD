@@ -1,0 +1,11 @@
+package org.example.patterns.structural.decorator;
+
+// Step 3: Define the Abstract Base Decorator
+public abstract class ToppingDecorator implements BasePizza {
+   public  BasePizza pizza;
+
+    public ToppingDecorator(BasePizza pizza) {
+        this.pizza = pizza;
+    }
+
+}
