@@ -1,19 +1,20 @@
 creational
-
+1. factory pattern
+2. abstract factory pattern
 
 
 
 
 
 Structural
-
 1. decorator pattern
+2. proxy pattern
 
 
 
 
 
 Behavioral
-
 1. strategy pattern
 2. observer pattern
+3. chain of responsibility pattern
